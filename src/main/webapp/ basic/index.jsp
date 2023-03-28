@@ -9,7 +9,7 @@
 <body>
 	
 	<%@ include file="header.jsp" %>
-	여기는 index 파일입니다.
+	여기는 index 파일입니다..
 	<%@ include file="bottom.jsp" %>
 </body>
 </html>
