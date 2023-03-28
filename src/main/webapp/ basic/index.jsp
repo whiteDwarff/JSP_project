@@ -12,4 +12,4 @@
 	여기는 index 파일입니다..
 	<%@ include file="bottom.jsp" %>
 </body>
-</html>    
+</html>     
