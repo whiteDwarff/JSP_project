@@ -15,7 +15,7 @@
     out.println("<br>");
     
    	for(String i : hobby)
-   		out.println(i);
+   		out.println(i);  
     %>
 <!DOCTYPE html>
 <html>
