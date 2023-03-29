@@ -10,7 +10,7 @@
     
     
     for(String i : lang) 
-    	out.println(i);
+    	out.println(i);  
 		
     out.println("<br>");
     
@@ -26,4 +26,4 @@
 <body>
 
 </body>
-</html>
+</html>  
