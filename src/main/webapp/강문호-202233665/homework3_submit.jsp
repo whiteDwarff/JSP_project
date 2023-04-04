@@ -84,7 +84,7 @@
               	<span><%= email %></span>
               	<span><%= firstAdress %></span>
               	<span><%= lastAdress %></span>
-              	
+              	 
             </div>
         </div>
     </section>
