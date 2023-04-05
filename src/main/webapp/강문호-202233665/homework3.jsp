@@ -123,6 +123,14 @@
             if(this.value.length < 8 || this.value.length < 14) passwordChecking[0].innerHTML = "password must be at least 8<br> and no more than 14 characters long.";
             else passwordChecking[0].innerHTML = "";
         })
+        const form = document.getElementsByTagName("form")[0];
+        const input = document.getElementsByTagName("input");
+        form.addEventListener("submit", e => {
+        	
+        	for(let item of input) {
+        		if(item.value == '') e.preventDefault();
+        	}
+        })
     </script>
 </body>
 </html>
