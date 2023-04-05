@@ -31,7 +31,7 @@
 	// 반환값은 rs에 저장
 	ResultSet rs = stmt.executeQuery(sql);
 	
-	// rs의 return값이 true가 나올때까지 반복
+	// rs의 return값이 false가 나올때까지 반복
 	while(rs.next()) {
 		out.println("<p class='data'>" + rs.getString("name") + "</p>");
 		out.println(rs.getString("id"));
