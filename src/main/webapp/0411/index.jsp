@@ -2,6 +2,11 @@
     pageEncoding="UTF-8"
 		import="java.sql.*"    
 %>
+<%
+
+
+
+%>
 <!DOCTYPE html>
 <html>
 <head>

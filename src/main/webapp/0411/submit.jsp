@@ -24,7 +24,6 @@ String select = request.getParameter("select");
    pstmt.setString(3, grade);
    pstmt.setString(4, select);
    
-   
    //SQL 실행
    int i = pstmt.executeUpdate();
    

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+section {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ border: 1px solid black;
+ padding: 40px 70px;
+}
+h2 { text-align: center; margin-bottom: 50px;}
+.wrap{
+	display: flex;
+}
+label,
+input { display: block; }
+.info-wrap *,
+.input-wrap * {margin-bottom: 20px;}
+.input-wrap select {margin-top: -20px;}
+.radio-wrap {display: flex;}
+.radio-wrap * { margin: 0;}
+.radio-wrap span { margin-right: 50px;}
+.radio-wrap span:last-child { margin-right: 0px;}
+.input-wrap select {width: 100%;}
+#submit-btn { width: 100%; cursor: pointer; padding: 10px; margin-top: 30px;}
