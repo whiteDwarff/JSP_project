@@ -1,15 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+		import="java.sql.*"    
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	 <link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="../0411/index.css"> 
+		<style>
+		#btn {
+			padding: 5px 10px;
+			margin-top: 50px;
+			text-align: center;
+			width: 100%;
+		}
+		#btn a {color: black; text-decoration: none;}
+	</style>
 </head>
 <body>
-<section>
-	<form action="submit2.jsp" method="post">
+	<section>
+	<form action="insert.jsp" method="post">
 		<h2>신상정보 입력</h2>
 		<div class="wrap">
 			<div class="info-wrap">
@@ -37,8 +49,7 @@
 		</div>
 		<input id="submit-btn" type="submit" value="입력완료">
 	</form>
+	<button id="center"><a href="index.jsp">HOME</a></button>
 </section>
-
-
 </body>
 </html>
