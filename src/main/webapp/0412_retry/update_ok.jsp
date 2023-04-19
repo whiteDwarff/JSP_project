@@ -5,6 +5,8 @@
  %>
  <%
  	request.setCharacterEncoding("utf-8");
+ 
+ 
  	String number = request.getParameter("number");
  	String name = request.getParameter("name");
  	String grade = request.getParameter("grade");

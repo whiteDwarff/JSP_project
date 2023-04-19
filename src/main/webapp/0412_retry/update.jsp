@@ -33,10 +33,8 @@
 			      
 			      ResultSet rs = pstmt.executeQuery();
 			      
-			      String stu_num, name, grade, subject;
-			      
-			      
-			      
+ 			      String stu_num, name, grade, subject;
+
 			      if (rs.next()) {
 			          stu_num = rs.getString("stu_num");
 			          name = rs.getString("name");

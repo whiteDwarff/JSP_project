@@ -10,6 +10,7 @@ Class.forName("org.mariadb.jdbc.Driver");
 String url = "jdbc:mariadb://localhost:3306/jspdb";
 String user = "munho";
 String password = "1111";
+
 if (number != "") {
    try (Connection con = DriverManager.getConnection(url, user, password)) {
 
@@ -25,7 +26,7 @@ if (number != "") {
       String grade = "";
       String subject = "";
 
-      if (rs.next()) {
+      if                                              (rs.next()) {
           stu_num = rs.getString("stu_num");
           name = rs.getString("name");
           grade = rs.getString("grade");
