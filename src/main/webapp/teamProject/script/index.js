@@ -6,7 +6,8 @@ const navImg = document.querySelectorAll('.sub-gnb img'),
       input = document.getElementsByTagName('input')[0],
       scrollLeft = document.querySelectorAll('.left'),
       scrollRight = document.querySelectorAll('.right'),
-      scrollBox = document.querySelectorAll('.scroll-box');
+      scrollBox = document.querySelectorAll('.scroll-box'),
+      urlCards = document.querySelectorAll('.url-card');
 let isSlideState = true;
 
 for(let i=0; i<navImg.length; i++){
@@ -28,8 +29,8 @@ for(let i=0; i<navImg.length; i++){
         }
     })
 }
-form.addEventListener('submit', e => {
-    
+// input submit handler
+form.addEventListener('submit', e => {                
     if(input.value == ''){
         e.preventDefault();
         alert('검색어를 입력해주세요.')
@@ -38,27 +39,27 @@ form.addEventListener('submit', e => {
         alert('검색어는 두글자 이상 입력해주세요.')
     }
 });
-for(let item of scrollLeft) {
-    item.classList.add('hidden');
-}
+// scoll event handler
 for (let i = 0; i < scrollLeft.length; i++) {
     scrollLeft[i].addEventListener("click", e => {
-    scrollBox[i].scrollLeft -= 40;
-    
-    if(scrollBox[i].scrollLeft == 120) 
-        e.target.classList.add('hidden');
-    else if(scrollBox[i].scrollLeft < 480)
-        scrollRight[i].classList.remove('hidden');
-
+	    scrollBox[i].scrollLeft -= 40;
+	    
+	    if(scrollBox[i].scrollLeft == 0) 
+	      e.target.classList.add('hidden');
+	    // right 버튼 handler
+	    else if(scrollBox[i].scrollLeft < (scrollBox[i].scrollWidth - scrollBox[i].clientWidth) - 40) {
+	        scrollRight[i].classList.remove('hidden');
+			}
     });
 }
 for (let i = 0; i < scrollRight.length; i++) {
     scrollRight[i].addEventListener("click", (e) => {
-        scrollBox[i].scrollLeft += 40;
+		  scrollBox[i].scrollLeft += 40;
 
-        if(scrollBox[i].scrollLeft == 240) 
-            scrollLeft[i].classList.remove('hidden');
-        else if(scrollBox[i].scrollLeft > 640) 
-            e.target.classList.add('hidden');
+     	if(scrollBox[i].scrollLeft) 
+        scrollLeft[i].classList.remove('hidden');
+      // right 버튼 handler
+      if(scrollBox[i].scrollLeft == (scrollBox[i].scrollWidth - scrollBox[i].clientWidth))
+      	e.target.classList.add('hidden');
     });
 }

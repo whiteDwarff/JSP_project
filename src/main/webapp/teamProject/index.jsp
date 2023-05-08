@@ -9,11 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodeGrow</title>
   <link href="./img/icon.png" rel="shortcut icon" type="image/x-icon">
-  <link rel="stylesheet" href="./style/index1.css">
+  <link rel="stylesheet" href="./style/index.css">
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div class="header-wrap">
       <h1><a href="#">CodeGrow</a></h1>
       <nav>
@@ -66,7 +66,7 @@
   <section>
     <div class="section-wrap">
       <article id="dev-list">
-        <h2>The Only RoadMap Uneed<br><span id="h2-span">차근차근 따라만가면 완성되는 개발자의 꿈.</span></h2>
+        <h2>The Only RoadMap You Need<br><span id="h2-span">차근차근 따라만가면 완성되는 개발자의 꿈.</span></h2>
         <div class="dev-list-wrap">
           <div class="thum">
             <img src="./img/html.png" alt="">
@@ -103,13 +103,8 @@
     <article id="html" class="relative">
       <h2 class="h2-title">웹클라이언트의 시작. <span class="h2-title-gray">HTML/CSS</span></h2>
       <div class="scroll-box">
-      <!--  scroll img -->
-       <div class="scroll-img left">
-          <img src="./img/scoll-left.png" alt="">
-        </div>
-        <div class="scroll-img right">
-          <img src="./img/scroll-right.png" alt="">
-        </div>
+      	 <img src="./img/scroll-left.png" class="scroll-img left hidden">
+         <img src="./img/scroll-rt.png" class="scroll-img right">
         <div class="card-wrap">
         <div class="url-card background-none"></div>
         <%
@@ -129,7 +124,7 @@
 						while(rs.next()){
 				%>
           <div class="url-card">
-            <a href="#">
+            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -153,13 +148,8 @@
     <article id="script" class="relative">
       <h2 class="h2-title">동적인 웹페이지를 구현.<span class="h2-title-gray"> JavaScript</span></h2>
       <div class="scroll-box">
-           <!--  scroll img -->
-       <div class="scroll-img left">
-          <img src="./img/scoll-left.png" alt="">
-        </div>
-        <div class="scroll-img right">
-          <img src="./img/scroll-right.png" alt="">
-        </div>
+      	<img src="./img/scroll-left.png" class="scroll-img left hidden">	
+        <img src="./img/scroll-rt.png" class="scroll-img right">
         <div class="card-wrap">
         <div class="url-card background-none"></div>
          <%
@@ -172,8 +162,8 @@
 						
 						while(rs.next()){
 				%>
-                   <div class="url-card">
-            <a href="#">
+          <div class="url-card">
+            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -192,17 +182,13 @@
         </div>
       </div>
     </article> <!-- script  -->
+    </section>
     <section>
     <article id="database"  class="relative">
       <h2 class="h2-title">관계형 데이터 베이스의 시작.<span class="h2-title-gray"> DataBase</span></h2>
       <div class="scroll-box">
-       <!--  scroll img -->
-       <div class="scroll-img left">
-          <img src="./img/scoll-left.png" alt="">
-        </div>
-        <div class="scroll-img right">
-          <img src="./img/scroll-right.png" alt="">
-        </div>
+      	<img src="./img/scroll-left.png" class="scroll-img left hidden">
+        <img src="./img/scroll-rt.png" class="scroll-img right">
         <div class="card-wrap">
         <div class="url-card background-none"></div>
          <%
@@ -215,8 +201,8 @@
 						
 						while(rs.next()){
 				%>
-                   <div class="url-card">
-            <a href="#">
+          <div class="url-card">
+           <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -235,17 +221,13 @@
         </div>
       </div>
     </article> <!-- database  -->
+    </section>
     <section>
     <article id="jsp" class="relative">
       <h2 class="h2-title">웹 애플리케션 개발의 기초.<span class="h2-title-gray"> JSP</span></h2>
       <div class="scroll-box">
-       <!--  scroll img -->
-       <div class="scroll-img left">
-          <img src="./img/scoll-left.png" alt="">
-        </div>
-        <div class="scroll-img right">
-          <img src="./img/scroll-right.png" alt="">
-        </div>
+      	<img src="./img/scroll-left.png" class="scroll-img left hidden">
+        <img src="./img/scroll-rt.png" class="scroll-img right">
         <div class="card-wrap">
         <div class="url-card background-none"></div>
          <%
@@ -259,7 +241,7 @@
 						while(rs.next()){
 				%>
           <div class="url-card">
-            <a href="#">
+            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -278,11 +260,15 @@
         </div>
       </div>
     </article> <!-- jsp  -->
+    </section>
     <section>
     <article id="spring" class="relative">
       <h2 class="h2-title">Java를 기반으로 한 오픈 소스 프레임워크.<span class="h2-title-gray"> Spring</span></h2>
       <div class="scroll-box">
+      	 <img src="./img/scroll-left.png" class="scroll-img left hidden">
+         <img src="./img/scroll-rt.png" class="scroll-img right">
         <div class="card-wrap">
+        <div class="url-card background-none"></div>
          <%
 					try(Connection con = DriverManager.getConnection(url, user, password)) {
 				
@@ -294,7 +280,7 @@
 						while(rs.next()){
 				%>
           <div class="url-card">
-            <a href="#">
+            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -314,9 +300,9 @@
       </div>
     </article> <!-- spring  -->
   </section>
-
-
-  <script src="./script/index1.js"></script>
+  
+  <a href="#header"><img src="./img/swipe.png" id="swipe-btn"></a>
+  <script src="./script/index.js"></script>
 </body>
 
 </html>
