@@ -1,8 +1,5 @@
 
-const slideWrap = document.querySelectorAll('.slide-wrap'),
-      header = document.querySelector('header');
-      section = document.querySelectorAll('section'),
-      scrollLeft = document.querySelectorAll('.left'),
+const scrollLeft = document.querySelectorAll('.left'),
       scrollRight = document.querySelectorAll('.right'),
       scrollBox = document.querySelectorAll('.scroll-box'),
       urlCards = document.querySelectorAll('.url-card');

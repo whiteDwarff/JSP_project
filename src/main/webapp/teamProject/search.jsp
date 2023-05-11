@@ -27,6 +27,7 @@
   <title>CodeGrow</title>
   <link href="./img/icon.png" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" href="./style/search.css?after">
+  <link rel="stylesheet" href="./style/search-media.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
   <%@include file="./header.jsp" %>
   
   <section id="white-bg">
-    <span class="h2-title">검색결과 for : <span class="h2-title-gray"><%=request.getParameter("search") %> </span></span>
+    <span class="h2-title">검색결과 for : <b><%=request.getParameter("search") %> </b></span>
   </section>
   
   <section id="card-box">

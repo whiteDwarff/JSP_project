@@ -11,7 +11,6 @@ for(let i=0; i<navImg.length; i++){
         
         for(let item of slideWrap) item.style.display = 'none';
         
-        console.log(isSlideState);
         if(isSlideState) {
             slideWrap[i].style.display = 'block';
             isSlideState = false;

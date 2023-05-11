@@ -25,8 +25,8 @@
 	<meta charset="UTF-8">
 	 <title>CodeGrow</title>
    <link href="./img/icon.png" rel="shortcut icon" type="image/x-icon">
-   <link rel="stylesheet" href="./style/search.css?after">
-   <style> #card-box { margin-top: 96.5px; }</style>
+   <link rel="stylesheet" href="./style/search.css">
+   <link rel="stylesheet" href="./style/search-media.css">
 </head>
 <body>
 
