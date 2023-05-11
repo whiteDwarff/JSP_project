@@ -46,7 +46,7 @@
             width: 40%;
             background-color: #fff;
         }
-        #join { display: none; width: 40%; background-color: #fff; margin-left: 70px;}
+        #join { display: none; width: 40%; background-color: #fff; margin-left: 75px;}
         main .content-wrap:first-child,
         #join .content-wrap:first-child {margin-bottom: 30px; padding-bottom: 30px;}
         .submit-button {

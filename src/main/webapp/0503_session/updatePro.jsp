@@ -1,3 +1,6 @@
+<%@page import="javax.sql.DataSource"%>
+<%@page import="javax.naming.Context"%>
+<%@page import="javax.naming.InitialContext"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     import ="java.sql.*" %>
@@ -8,16 +11,18 @@
 	String pwd = request.getParameter("pwd");
 
 	//1. DB 연동 드라이버 로드
-	Class.forName("org.mariadb.jdbc.Driver");
 	
 	//2. 연결 객체 생성
-	String url = "jdbc:mariadb://localhost:3306/jinsookdb";
-	String user = "jinsook";
-	String passwd = "1111";
-	Connection con = DriverManager.getConnection(url, user, passwd);
+	InitialContext initCtx = new InitialContext();
+	
+	Context ctx = (Context)initCtx.lookup("java:comp/env");
+	
+	DataSource ds = (DataSource)ctx.lookup("jdbc/munho");
+	
+	Connection con = ds.getConnection();
 
 	//3. 생성된 연결을 통해 SQL문 실행 의뢰 준비
-	String sql = "UPDATE LOGIN SET NAME=?, PWD=? WHERE ID=?";
+	String sql = "UPDATE member SET NAME=?, PWD=? WHERE ID=?";
 	
 	PreparedStatement pstmt = con.prepareStatement(sql);
 	pstmt.setString(1, name);

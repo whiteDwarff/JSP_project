@@ -9,56 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodeGrow</title>
   <link href="./img/icon.png" rel="shortcut icon" type="image/x-icon">
-  <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./style/index.css?after"> 
 </head>
 
 <body>
-  <header id="header">
-    <div class="header-wrap">
-      <h1><a href="#">CodeGrow</a></h1>
-      <nav>
-        <a href="#html">HTML / CSS</a>
-        <a href="#script">JavaScript</a>
-        <a href="#database">DataBase</a>
-        <a href="#jsp">JSP</a>
-        <a href="#spring">Spring</a>
-      </nav>
-      <div class="sub-gnb">
-        <img src="./img/search.png" alt="">
-        <img src="./img/mypage.png" alt="">
-      </div>
-    </div>
-    <div id="search-box">
-      <div class="slide-wrap">
-        <form action="" method="post">
-          <img src="./img/search.png" alt="">
-          <input type="text" placeholder="codegrow.com 검색하기">
-        </form>
-      </div>
-    </div>
-    <div id="account-box">
-      <div class="slide-wrap">
-        <h4>Welcome CodeGrow !</h4>
-        <!-- session이 있다면 #login-span은 바꿔야 함 -->
-        <span id="login-span">저장해둔 항목이 있는지 확인하려면 <a href="login.jsp">로그인</a>하세요</span>
-        <span id="profile">내프로필</span>
-        <div class="box-wrap">
-          <div class="img-box">
-            <img src="./img/list.jpg" alt="">
-            <img src="./img/acount.jpg" alt="">
-            <img src="./img/login.jpg" alt="">
-          </div>
-          <div class="label-box">
-            <a href="#">관심 목록</a>
-            <a href="#">계정</a>
-            <!-- session이 있다면 하단 태그는 로그아웃 버튼으로 변경 -->
-            <a href="#">로그인</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header> <!-- header -->
-
+ 
+  <%@include file="./header.jsp" %>
+ 
   <section id="white-bg">
     <span>CodeGrow는 회원가입 후 무료로 이용하실 수 있습니다.</span>
   </section>
@@ -124,7 +81,7 @@
 						while(rs.next()){
 				%>
           <div class="url-card">
-            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
+            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>&lang=<%= rs.getString("category_id") %>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -163,7 +120,7 @@
 						while(rs.next()){
 				%>
           <div class="url-card">
-            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
+            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>&lang=<%= rs.getString("category_id") %>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -202,7 +159,7 @@
 						while(rs.next()){
 				%>
           <div class="url-card">
-           <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
+           <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>&lang=<%= rs.getString("category_id") %>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -241,7 +198,7 @@
 						while(rs.next()){
 				%>
           <div class="url-card">
-            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
+            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>&lang=<%= rs.getString("category_id") %>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -280,7 +237,7 @@
 						while(rs.next()){
 				%>
           <div class="url-card">
-            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>">
+            <a href="education-page.jsp?title=<%=rs.getString("title")%>&content=<%=rs.getString("description")%>&url=<%=rs.getString("url")%>&lang=<%= rs.getString("category_id") %>">
               <!-- ######### java 코드 삽입 영역#######-->
               <!-- title -->
               <span class="url-title"><%= rs.getString("title")%></span>
@@ -302,7 +259,11 @@
   </section>
   
   <a href="#header"><img src="./img/swipe.png" id="swipe-btn"></a>
-  <script src="./script/index.js"></script>
+  
+  <%@include file="./footer.jsp" %>
+  
+  <script src="./script/index.js?after"></script>
+  <script src="./script/header.js?after"></script>
 </body>
 
 </html>

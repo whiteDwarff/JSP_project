@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	 <title>CodeGrow-join</title>
     <link href="./img/icon.png" rel="shortcut icon" type="image/x-icon">
-      <link rel="stylesheet" href="./style/login.css">
+      <link rel="stylesheet" href="./style/login.css?after">
 </head>
 <body>
 
@@ -15,8 +15,8 @@
         <article class="login" id="login">
             <div class="content-wrap">
                 <h2>Sign In</h2>
-                <form action="" method="" id="login-form">
-                    <input type="text" name="id" placeholder="아이디">
+                <form action="login_ok.jsp" method="post" id="login-form">
+                    <input type="text" name="email" placeholder="이메일">
                     <input type="password" name="password" placeholder="비밀번호">
                     <input id="login-submit-btn" class="submit-button" type="submit" value="로그인">
                 </form>
@@ -31,10 +31,10 @@
         <article id="join" class="center">
             <div class="content-wrap">
                 <h2>Create Account</h2>
-                <form action="" method="" id="join-form">
-                    <input type="text" name="id" placeholder="이메일">
+                <form action="insert.jsp" method="" id="join-form">
+                    <input type="text" name="email" placeholder="이메일">
                     <input type="text" name="name" placeholder="이름">
-                    <input type="text" name="tel" placeholder="휴대폰 번호 ( - 생략)">
+                    <input type="text" name="tel" placeholder="휴대폰 번호 (-포함)">
                     <input type="password" name="password" placeholder="비밀번호">
                     <input id="join-submit-btn" class="submit-button" type="submit" value="가입">
                 </form>
@@ -47,6 +47,7 @@
             </article>
         </article>
     </main>
-	<script src="./script/login.js"></script>
+    
+ <script src="./script/login1.js"></script>
 </body>
 </html>

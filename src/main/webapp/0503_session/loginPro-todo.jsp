@@ -1,3 +1,6 @@
+<%@page import="javax.sql.DataSource"%>
+<%@page import="javax.naming.Context"%>
+<%@page import="javax.naming.InitialContext"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     import ="java.sql.*" %>
@@ -8,13 +11,16 @@
 	String id = request.getParameter("id");
 	String pwd = request.getParameter("pwd");
 	
-	Class.forName("org.mariadb.jdbc.Driver");
 	
-	String url = "jdbc:mariadb://localhost:3306/jspdb";
-	String user = "munho";
-	String password = "1111";
+		InitialContext initCtx = new InitialContext();
+		
+		Context ctx = (Context)initCtx.lookup("java:comp/env");
+		
+		DataSource ds = (DataSource)ctx.lookup("jdbc/munho");
+		
+	  /* Connection con = ds.getConnection(); */
 	
-	try(Connection con = DriverManager.getConnection(url, user, password)){
+	try(Connection con = ds.getConnection()){
 		
 		String sql = "select id, pwd from member where id=? and pwd=?";
 		PreparedStatement pstmt = con.prepareStatement(sql);

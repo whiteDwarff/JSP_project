@@ -1,11 +1,5 @@
 @charset "UTF-8";
-@charset "UTF-8";
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
+
 /* 모든 scroll 영역의 scoll 숨김 */
 ::-webkit-scrollbar {
     display: none; 
@@ -15,101 +9,7 @@ img,
 embed {
     vertical-align: bottom;
 }
-header {
-    background: rgb(244, 244, 244, 0.5);
-    transition: 0.7s ease-in-out;
-}
-.header-wrap {
-    width: 80%;
-    margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-}
-.header-wrap .sub-gnb img {
-    width: 30px;
-    margin: 0 0 10px 100px;
-    cursor: pointer;
-}
-h1 a {
-    color: #000;
-    font-size: 19px;
-}
-nav a {
-    color: #333;
-    margin-left: 100px;
-}
-#search-box,
-#account-box {
-    background-color: #fff;
-}
-.slide-wrap {
-    width: 50%;
-    margin: 0 auto;
-    display: none;
-    padding: 40px 0;
-    transition: 0.4s ease-in-out;
-}
 
-#search-box form {
-    display: flex;
-    align-items: center;
-}
-#search-box form img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
-#search-box input {
-    width: calc(40% - 30px);
-    padding-left: 100px;
-    padding: 20px 0;
-    outline: none;
-    font-size: 24px;
-    border-style: none;
-}
-input::placeholder {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-#account-box h4 {
-    font-size: 24px;
-}
-#login-span {
-    margin: 30px 0 50px 0;
-    color: rgb(130, 130, 130);
-}
-#login-span a {
-    color: rgb(43, 126, 252);
-    text-decoration: underline;
-}
-#profile {
-    margin-bottom: 25px;
-    color: rgb(130, 130, 130);
-}
-#account-box .box-wrap {
-    display: flex;
-}
-#account-box span {
-    display: block;
-}
-#account-box .box-wrap .img-box img {
-    width: 14px;
-    display: block;
-    margin-bottom: 15px;
-}
-#account-box .box-wrap .label-box a {
-    display: block;
-    margin: 0 0 15px 15px;
-    margin-bottom: 10px;
-    text-align: left;
-    color: rgb(33, 33, 33);
-    font-weight: bold;
-}
 section {
     background: rgb(244, 244, 244, 0.5);
     width: 100%;
@@ -185,19 +85,21 @@ section span {
     text-align: left;
     color: black;
     padding: 0 20px;
-     display: block;
+    display: block;
 }
 .url-title {
     font-size: 23px;
+    height: 55px;
 }
 .url-content {
     font-weight: 400;
-    margin: 30px 0;
+    margin: 10px 0;
 }
 /* url */
 embed {
     width: 90%;
-    border-radius: 5%;
+    height: 151.88px;
+    border-radius: 5px;
 }
 
 /* scroll 버튼 event */
@@ -237,7 +139,7 @@ embed {
     font-size: 14px;
     background-color: #fff;
 }
-#white-bg span { font-weight: normal; }
+#white-bg span { font-weight: normal; margin: 0;}
 
 /* 스크롤 맨위로 올리기 */
 #swipe-btn {
@@ -248,4 +150,7 @@ embed {
 	z-index: 10;
 	cursor: pointer;
 }
-
+.background-black {
+	background-color: black;
+	color: white;
+}

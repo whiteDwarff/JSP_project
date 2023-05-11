@@ -1,13 +1,17 @@
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="javax.naming.Context"%>
+<%@page import="javax.sql.DataSource"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     import="java.sql.*" %>
 <% 	String id = request.getParameter("id");
 	
-	Class.forName("org.mariadb.jdbc.Driver");
-	String url ="jdbc:mariadb://localhost:3306/jinsookdb";
-	String user ="jinsook";
-	String passwd ="1111";
-	Connection con = DriverManager.getConnection(url, user, passwd);
+	InitialContext initCtx = new InitialContext();
+	
+	Context ctx = (Context)initCtx.lookup("java:comp/env");
+	
+	DataSource ds = (DataSource)ctx.lookup("jdbc/munho");
+	Connection con = ds.getConnection();
 	
 	String sql = "select * from login where id = ?";
 	PreparedStatement pstmt = con.prepareStatement(sql);
