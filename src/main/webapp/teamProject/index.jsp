@@ -10,6 +10,7 @@
   <title>CodeGrow</title>
   <link href="./img/icon.png" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" href="./style/index.css"> 
+  <link rel="stylesheet" href="./style/index-media.css"> 
 </head>
 
 <body>
@@ -263,7 +264,7 @@
   <%@include file="./footer.jsp" %>
   
   <script src="./script/index.js?after"></script>
-  <script src="./script/header.js"></script>
+   <script src="./script/header.js"></script>
 </body>
 
 </html>

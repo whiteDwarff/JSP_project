@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @charset "UTF-8";
 * { list-style: none; color: black;}
-span { display: block; }
+/* span { display: block; } */
 embed {	width: 70%; }
 header { margin-bottom: 80px; }
 #main-url { border-radius: 20px; }
