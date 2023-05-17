@@ -1,5 +1,5 @@
 <%@page import="test.dao_dto.memberDto"%>
-<%@page import="test.dao_dto.memberDao"%>
+<%@page import="test.dao_dto.memberDao_ref"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -7,7 +7,7 @@
 
 <%
 	// 함수 호출 
-	memberDao dao = new memberDao();
+	memberDao_ref dao = new memberDao_ref();
 	ArrayList<memberDto> dtos = dao.memberList();
 %>
 

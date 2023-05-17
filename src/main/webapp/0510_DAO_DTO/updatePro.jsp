@@ -6,19 +6,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     import ="java.sql.*" %>
-<%	
-	request.setCharacterEncoding("utf-8");
+<%	request.setCharacterEncoding("utf-8");
 
 	String id = request.getParameter("id");
 	String name = request.getParameter("name");
 	String pwd = request.getParameter("pwd");
 
 	memberDao dao = new memberDao();
-	memberDto dto = new memberDto(
-			request.getParameter("id"),
-			request.getParameter("name"),
-			request.getParameter("pwd"));
-	dao.joinDto(dto);
-	
-	response.sendRedirect("list.jsp");
-%>
+	memberDto dto = new memberDto(id, name, pwd);
+	dao.updateDao(dto);
+	%>
+
+	<script>
+		let ans = alert("변경되었습니다!");
+		if (!ans){
+			location.href='list.jsp';
+		}
+	</script>
+
+
+
