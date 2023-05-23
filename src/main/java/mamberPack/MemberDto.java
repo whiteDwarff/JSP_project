@@ -1,6 +1,10 @@
-package memberPack;
+package mamberPack;
 
 public class MemberDto {
+	private String id;
+	private String name;
+	private String pwd;
+
 	public String getId() {
 		return id;
 	}
@@ -19,8 +23,10 @@ public class MemberDto {
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
-	private String id;
-	private String name;
-	private String pwd;
-
+	public MemberDto() {}
+	public MemberDto(String id, String name, String pwd) {
+		this.id = id;
+		this.name = name;
+		this.pwd = pwd;
+	}
 }

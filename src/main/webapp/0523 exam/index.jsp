@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<a href="boardList.jsp">목록보기</a>
+<a href="insertForm.jsp">등록하기</a>
 </body>
 </html>
