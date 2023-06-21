@@ -45,7 +45,7 @@
        <br>
        <div class="text-center">
             <button  type="submit" class="btn btn-secondary">등록</button>
-            <button type="button" class="btn btn-secondary" onclick="location.href = 'boardList.jsp;'">목록</button>
+            <button type="button" class="btn btn-secondary" onclick="location.href = 'boardList.jsp'">목록</button>
          </div>
       </form>
    </div>

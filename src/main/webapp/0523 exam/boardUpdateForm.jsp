@@ -60,7 +60,7 @@ boardDto dto = dao.selectDao(bcodeInt);
        <div class="text-center">
              <input type="submit" value="변경" class="btn btn-secondary" >  
                <input type="button" value="삭제" class="btn btn-secondary" onclick="location.href='boardDelete.jsp?id=<%=dto.getBcode()%>'">
-               <input type="button" value="목록" class="btn btn-secondary" onclick="location.href='BoardList.jsp'">
+               <input type="button" value="목록" class="btn btn-secondary" onclick="location.href='boardList.jsp'">
          </div>
       </form>
    </div>

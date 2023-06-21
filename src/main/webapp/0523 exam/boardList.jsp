@@ -24,7 +24,7 @@
       <h1 class="text-center font-weight-bold">게시판 정보</h1>
       <br>
       <table class="table table-hover">
-         <tr>
+         <tr>			
             <th>글번호</th>
             <th>제목</th>
             <th>내용</th>
